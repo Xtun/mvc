@@ -1,8 +1,23 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// подключаем файлы ядра
+require_once 'core/model.php';
+require_once 'core/view.php';
+require_once 'core/controller.php';
 
+/*
+Здесь обычно подключаются дополнительные модули, реализующие различный функционал:
+	> аутентификацию
+	> кеширование
+	> работу с формами
+	> абстракции для доступа к данным
+	> ORM
+	> Unit тестирование
+	> Benchmarking
+	> Работу с изображениями
+	> Backup
+	> и др.
+*/
+
+require_once 'core/route.php';
+Route::start(); // запускаем маршрутизатор
